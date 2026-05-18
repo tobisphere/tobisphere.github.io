@@ -12,15 +12,18 @@
             <h1>Tobias Zelders</h1>
             <div class="contact-info">
                 <a href="mailto:tobizelders@proton.me">tobizelders@proton.me</a> | 
-                <a href="https://github.com/tobisphere" target="_blank">github.com/tobisphere</a> | 
-                +31 6 39086341
+                <a href="https://github.com/tobisphere" target="_blank">github</a> | 
+                <a href="https://nl.linkedin.com/in/tobias-zelders-600688211" target="_blank">linkedin
             </div>
         </header>
 
         <section class="education">
             <h2>Education</h2>
             <div class="job">
-                <h3>Informatica Student @ Hogeschool Rotterdam</h3>
+                <div class="job-header">
+                    <h3>Informatica Student @ Hogeschool Rotterdam</h3>
+                    <span class="date">Present</span>
+                </div>
                 <ul>
                     <li><strong>Relevant Courses:</strong> Algorithms, Databases, Web development, Networking, Concurrency, Software Quality, Software Design</li>
                     <li><strong>GPA:</strong> 7.7 (3.08)</li>
@@ -31,19 +34,28 @@
         <section class="experience">
             <h2>Experience</h2>
             <div class="job">
-                <h3>Software Engineer Intern @ Stager</h3>
-                <ul>
-                    <li>Engineered many Junior issues</li>
-                    <li>Refactored existing architecture</li>
-                    <li>Developed a new feature integrating a timetable into a form for feedback from external parties</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>System Administrator & Privacy Officer @ Worm</h3>
+                <div class="job-header">
+                    <h3>System Administrator & Privacy Officer @ Worm</h3>
+                    <span class="date">July 2024 - Present</span>
+                </div>
                 <ul>
                     <li>Installing different operating systems</li>
                     <li>Setting up & maintaining servers</li>
-                    <li>Managed a migration from Google to Nextcloud</li>
+                    <li>Managing a migration from Google to Nextcloud</li>
+                    <li>Overseeing GDPR compliance</li>
+                    <li>Supervising accounts for 50+ employees</li>
+                </ul>
+            </div>
+    
+            <div class="job">
+                <div class="job-header">
+                    <h3>Software Engineer Intern @ Stager</h3>
+                    <span class="date">January 2025 - July 2025</span>
+                </div>
+                <ul>
+                    <li>Resolved 100+ Junior issues including Kotlin, CSS and HTML changes</li>
+                    <li>Refactored existing architecture</li>
+                    <li>Developed a new feature integrating a timetable into a form for feedback from external parties</li>
                 </ul>
             </div>
         </section>
@@ -54,7 +66,10 @@
             <div class="project">
                 <h3>Software Quality</h3>
                 <ul>
-                    <li>A declaration system focused on security</li>
+                    <li>A declaration system that allows employees to
+submit expense claims for travel kilometers and home office days where managers can approve or reject
+these claims</li>
+                    <li>Includes security measures like: Input validation, Encryption, Logging, Role-based access, SQL injection protection, Brute-force prevention<li>
                     <li>Python console application</li>
                     <li>SQLite database</li>
                 </ul>
@@ -63,10 +78,11 @@
             <div class="project">
                 <h3>Hybrid World</h3>
                 <ul>
-                    <li>A mixed reality interactive experience</li>
-                    <li>Setup with an API server behind a reverse proxy</li>
-                    <li>Web application to send illustrations to API</li>
+                    <li>A mixed reality experience with projections of a historic room with user interaction and npc storytelling</li>
+                    <li>Setup with an FastAPI server behind a nginx reverse proxy</li>
+                    <li>Web application to send illustrations to FastAPI</li>
                     <li>Unreal Engine to produce the experience and process illustrations</li>
+                    <li>All connected to beamers and surround sound headphones with the purpose of achieving mixed reality</li>
                 </ul>
             </div>
         </section>
@@ -84,16 +100,52 @@
             </div>
         </section>
 
-        <section class="skills">
-            <h2>Skills</h2>
-            <div class="skill-group">
-                <strong>Languages:</strong> Python, C, C#
+<section class="skills">
+            <h2>Technical Skills</h2>
+            
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-tags">
+                    <span class="tag advanced">Python</span>
+                    <span class="tag proficient">C#</span>
+                    <span class="tag proficient">C</span>
+                    <span class="tag proficient">HTML</span>
+                    <span class="tag proficient">CSS</span>
+                    <span class="tag familiar">JavaScript</span>
+                    <span class="tag familiar">Kotlin</span>
+                    <span class="tag proficient">GDScript</span>
+                </div>
             </div>
-            <div class="skill-group">
-                <strong>Frameworks/Libraries:</strong> FastAPI, Docker, nginx
+
+            <div class="skill-category">
+                <h3>Game Development & Engines</h3>
+                <div class="skill-tags">
+                    <span class="tag proficient">Unity</span>
+                    <span class="tag proficient">Godot</span>
+                    <span class="tag familiar">Unreal Engine</span>
+                </div>
             </div>
-            <div class="skill-group">
-                <strong>Technologies:</strong> GNU/Linux, Git
+
+            <div class="skill-category">
+                <h3>DevOps & Infrastructure</h3>
+                <div class="skill-tags">
+                    <span class="tag advanced">GNU/Linux</span>
+                    <span class="tag proficient">Ubuntu Server</span>
+                    <span class="tag proficient">Docker</span>
+                    <span class="tag proficient">Git</span>
+                    <span class="tag proficient">nginx</span>
+                    <span class="tag proficient">FastAPI</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Creative & Media Tools</h3>
+                <div class="skill-tags">
+                    <span class="tag proficient">DaVinci Resolve</span>
+                    <span class="tag proficient">GIMP</span>
+                    <span class="tag proficient">LMMS</span>
+                    <span class="tag familiar">Blender</span>
+                </div>
             </div>
         </section>
     </div>
