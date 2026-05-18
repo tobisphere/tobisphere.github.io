@@ -241,6 +241,104 @@ body.dark-mode .tag.familiar {
     color: var(--accent-grey);
 }
 
+.languages {
+    margin-bottom: 30px;
+}
+
+.language-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%; /* Two columns on larger screens */
+    min-width: 250px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-left: 3px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for languages */
+.language-item:hover {
+    border-left-color: var(--link-color);
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateX(5px);
+}
+
+.lang-name {
+    font-weight: 600;
+    color: var(--subheading-color);
+    font-size: 1.1em;
+}
+
+.lang-level {
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: var(--border-color);
+    color: var(--date-color);
+}
+
+.lang-level.native {
+    color: var(--accent-green);
+    font-weight: bold;
+    background-color: rgba(39, 174, 96, 0.1);
+}
+
+.lang-level.fluent {
+    color: var(--accent-blue);
+    font-weight: bold;
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.lang-level.intermediate {
+    color: var(--date-color);
+    background-color: rgba(149, 165, 166, 0.1);
+}
+
+.lang-level.beginner {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+body.dark-mode .language-item {
+    background-color: rgba(0, 255, 65, 0.05);
+    border-left-color: var(--border-color);
+}
+
+body.dark-mode .language-item:hover {
+    border-left-color: var(--link-color);
+    box-shadow: 0 0 8px var(--link-color);
+}
+
+body.dark-mode .lang-level {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .lang-level.native {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+    box-shadow: 0 0 5px var(--accent-green);
+}
+
+body.dark-mode .lang-level.fluent {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    box-shadow: 0 0 5px var(--accent-blue);
+}
+
+body.dark-mode .lang-level.intermediate {
+    border-color: var(--date-color);
+    color: var(--date-color);
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 20px;
