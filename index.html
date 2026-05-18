@@ -15,6 +15,7 @@
                 <a href="https://github.com/tobisphere" target="_blank">github</a> | 
                 <a href="https://nl.linkedin.com/in/tobias-zelders-600688211" target="_blank">linkedin</a>
             </div>
+            <button id="theme-toggle" class="theme-btn">Dark Mode</button>
         </header>
 
         <section class="education">
@@ -61,22 +62,24 @@
 
         <section class="projects">
             <h2>Recent Projects</h2>
-            <div class="job-header">
-                <h3>Software Quality: Declaration System</h3>
-                <span class="date">January 2026 - Present</span>
-            </div>
-            <ul>
-                <li>Built a secure Python console application for declarations using SQLite.</li>
-                <li>Implemented strict security protocols and focused on data integrity.</li>
-            </ul>
+            <div class="job">
+                <div class="job-header">
+                    <h3>Software Quality: Declaration System</h3>
+                    <span class="date">January 2026 - Present</span>
+                </div>
+                <ul>
+                    <li>Built a secure Python console application for declarations using SQLite.</li>
+                    <li>Implemented strict security protocols and focused on data integrity.</li>
+                </ul>
             </div>
 
-            <div class="job-header">
-                <h3>Hybrid World: Mixed Reality Experience</h3>
-                <span class="date">January 2026 - present</span>
-            </div>
+            <div class="job">
+                <div class="job-header">
+                    <h3>Hybrid World: Mixed Reality Experience</h3>
+                    <span class="date">January 2026 - Present</span>
+                </div>
                 <ul>
-                    <li>Setup with an FastAPI server behind a nginx reverse proxy</li>
+                    <li>Setup with a FastAPI server behind an nginx reverse proxy</li>
                     <li>Web application to send illustrations to FastAPI</li>
                     <li>Unreal Engine to produce the experience and process illustrations</li>
                 </ul>
@@ -97,7 +100,7 @@
             </div>
         </section>
 
-<section class="skills">
+        <section class="skills">
             <h2>Technical Skills</h2>
             
             <div class="skill-category">
@@ -146,5 +149,27 @@
             </div>
         </section>
     </div>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            toggleBtn.textContent = 'Light Mode';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                toggleBtn.textContent = 'Light Mode';
+            } else {
+                localStorage.setItem('theme', 'light');
+                toggleBtn.textContent = 'Dark Mode';
+            }
+        });
+    </script>
 </body>
 </html>
