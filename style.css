@@ -113,6 +113,97 @@ h1 {
     box-shadow: 0 0 10px var(--link-color);
 }
 
+.info-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background-color: var(--accent-grey);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: help;
+    position: relative;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.info-btn:hover, .info-btn:focus {
+    background-color: var(--link-color);
+    transform: scale(1.15);
+    outline: none;
+}
+
+.question-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 300px;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    text-align: left;
+    border-radius: 6px;
+    padding: 14px;
+    position: absolute;
+    z-index: 100;
+    top: 130%;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    border: 1px solid var(--border-color);
+    font-size: 0.87em;
+    line-height: 1.5;
+    pointer-events: none;
+}
+
+.question-wrapper:hover .tooltip,
+.question-wrapper:focus-within .tooltip,
+.question-wrapper.clicked .tooltip {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 20px;
+    margin-left: -5px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent var(--border-color) transparent;
+}
+
+body.dark-mode .tooltip {
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.25);
+}
+
+body.dark-mode .tooltip::after {
+    border-color: transparent transparent var(--container-bg) transparent;
+}
+
+body.dark-mode .info-btn {
+    background-color: transparent;
+    border: 1px solid var(--accent-grey);
+    color: var(--accent-grey);
+}
+
+body.dark-mode .info-btn:hover,
+body.dark-mode .info-btn:focus {
+    border-color: var(--link-color);
+    color: var(--link-color);
+}
+
 .summary {
     margin-bottom: 30px;
     font-style: italic;
@@ -144,10 +235,11 @@ h2 {
 
 .job-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: baseline;
     margin-bottom: 5px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .job-header h3 {
@@ -343,19 +435,19 @@ body.dark-mode .lang-level.intermediate {
     .container {
         padding: 20px;
     }
-    
+
     h1 {
         font-size: 2em;
     }
-    
+
     h2 {
         font-size: 1.5em;
     }
-    
+
     .job-header {
         flex-direction: column;
     }
-    
+
     .date {
         margin-top: 5px;
     }
