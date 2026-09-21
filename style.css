@@ -14,6 +14,7 @@
     --btn-bg: #e0e0e0;
     --btn-text: #333;
     --btn-hover: #d0d0d0;
+    --info-btn-bg: #8ad0ff;
 }
 
 body.dark-mode {
@@ -32,6 +33,7 @@ body.dark-mode {
     --btn-bg: #003300;
     --btn-text: #00ff41;
     --btn-hover: #004d00;
+    --info-btn-bg:  #008f11;
 }
 
 * {
@@ -121,7 +123,7 @@ h1 {
     height: 20px;
     margin-left: 8px;
     border-radius: 50%;
-    background-color: var(--accent-grey);
+    background-color: var(--info-btn-bg);
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -347,7 +349,7 @@ body.dark-mode .tag.familiar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 45%; /* Two columns on larger screens */
+    width: 45%;
     min-width: 250px;
     padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.03);
@@ -355,7 +357,6 @@ body.dark-mode .tag.familiar {
     transition: all 0.3s ease;
 }
 
-/* Hover effect for languages */
 .language-item:hover {
     border-left-color: var(--link-color);
     background-color: rgba(0, 0, 0, 0.05);
